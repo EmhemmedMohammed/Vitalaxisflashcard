@@ -1,6 +1,6 @@
 <template>
   <transition appear enter-active-class="animated backInUp">
-    <div class="row justify-center items-center reverse ">
+    <div class="row justify-center items-center reverse">
       <h1 class="text-h4 q-mt-lg q-mb-sm text-yellow text-center  q-pr-lg">معلومات </h1>
       <h1 class="text-h6 q-mb-lg text-grey-5 text-center q-pr-lg">حول الحملة </h1>
     </div>
