@@ -27,9 +27,38 @@ const shareImage = async () => {
       console.error('Error sharing image:', error);
     }
   } else {
-    alert('المشاركه فقط تعمل علي اجهزه الموبايل');
+    alert('المشاركة متاحة فقط على الأجهزة المحمولة');
   }
 };
+
+// const imageUrl = '/images/app.jpg';
+
+// const shareImage = async () => {
+//   if (navigator.share) {
+//     try {
+//       const blob = await fetch(imageUrl).then(res => res.blob());
+//       const file = new File([blob], 'EpiLyCamp.jpg', { type: 'image/jpeg' });
+
+//       const shareData = {
+//         title: 'تطبيق الحملة الوطنيه للتطعيم',
+//         text: 'https://epilycamp.ncdc.gov.ly',
+//         files: [file]
+//       };
+
+//       if (/android/i.test(navigator.userAgent)) {
+//         // Android workaround: check if sharing URL alone works better
+//         delete shareData.files; // Remove image to share just the text and URL
+//       }
+
+//       await navigator.share(shareData);
+//       console.log('Image shared successfully!');
+//     } catch (error) {
+//       console.error('Error sharing image:', error);
+//     }
+//   } else {
+//     alert('المشاركه فقط تعمل علي اجهزه الموبايل');
+//   }
+// };
 
 </script>
 
