@@ -3,7 +3,7 @@ import { store } from '../store/store.js'
 
 
 // Make sure your image is stored in the public folder (e.g., 'public/images/example.jpg')
-const imageUrl = '/images/hi.jpg'; // Path to the image in public folder
+const imageUrl = '/images/app.jpg'; // Path to the image in public folder
 
 
 const shareImage = async () => {
@@ -18,7 +18,7 @@ const shareImage = async () => {
       // Using the Web Share API to share the image
       await navigator.share({
         title: 'تطبيق الحملة الوطنيه للتطعيم',
-        text: 'نزل التطبيق عبر مسح الكود',
+        text: 'https://epilycamp.ncdc.gov.ly',
         files: [file] // Pass the image as a file to share
       });
 
