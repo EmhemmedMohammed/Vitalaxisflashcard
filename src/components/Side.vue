@@ -247,7 +247,7 @@
   </div>
   <hr class="full-width q-my-sm">
   <div class="row justify-between items-center full-width reverse">
-    <p class="q-mb-xs  text-subtitle1">هل تم الايواء بالمستشفي</p>
+    <p class="q-mb-xs  text-subtitle1">هل تم الإيواء بالمستشفي؟</p>
     <q-btn-toggle   v-model="store.sq18" color="indigo-5" toggle-color="yellow-7" toggle-text-color="black"
       :options="[
         { label: 'لا', value: 'لا' },

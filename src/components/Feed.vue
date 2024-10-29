@@ -150,12 +150,12 @@ const givenDateTime = new Date(`${dateStr}T${timeStr}`);
 // Get the current date and time
 const currentDateTime = new Date();
 if (currentDateTime < givenDateTime) {
-  message.value = "من فضلك انتظر لحين بداية الحمله لإرسال الاستبيان و شكرا";
+  message.value = "من فضلك انتظر لحين بداية الحملة لإرسال التقييم و شكرا";
   return;
 }
 
   sending=true
-  message.value = "من فضلك انتظر لحين ارسال الاستبيان و شكرا";
+  message.value = "من فضلك انتظر لحين ارسال التقييم و شكرا";
 
   const { date, time } = getCurrentDateTime();
   const camp = {

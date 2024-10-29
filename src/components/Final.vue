@@ -36,7 +36,7 @@ const shareImage = async () => {
 
     <h1 class="text-h3 q-mt-md q-mb-xs text-grey-4">ليبيا</h1>
     <h1 class="text-h6 q-mt-sm q-mb-xs text-grey-4 full-width">المركز الوطني لمكافحة الأمراض</h1>
-    <h1 class="text-h5 q-my-xs q-mb-sm text-indigo-4 full-width">ادارة التطعيمات</h1>
+    <h1 class="text-h4 q-my-xs q-mb-sm text-indigo-4 full-width">إدارة التطعيمات</h1>
     <q-img class="q-mb-lg" src="../assets/ncdc.png" spinner-color="white" style="height: 140px; width: 140px" />
 
 
