@@ -35,9 +35,9 @@ console.log(lat)
 
 
   // if (latitude.value && longitude.value) {
-  // const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${long}&travelmode=driving`;
+  const url = `https://www.google.com/maps/dir/?api=1&destination=${lat},${long}&travelmode=driving`;
  
-  const url = `https://www.google.com/maps/dir/?api=1&destination=${lat}&travelmode=driving`;
+  // const url = `https://www.google.com/maps/dir/?api=1&destination=${lat}&travelmode=driving`;
 
   // const url = `https://www.google.com/maps/dir/?api=1&destination=32.3754,15.0925&travelmode=driving`;
 
@@ -67,8 +67,8 @@ const makeCall = (phoneNumber) => {
       <q-item clickable v-ripple class=" q-pa-sm q-my-sm text-h4 text-white " v-for="n in filteredList" :key="n.id"  style="box-shadow: 1px 1px 2px rgb(1, 17, 33); border-radius: 10px; background-color: rgba(162, 184, 228, 0.4); border-bottom: 1px solid rgb(246, 247, 246);">
    
        <!-- <q-btn class="q-mr-sm" round icon="call" size="md" color="indigo-1" text-color="black" @click="makeCall(n.tel)"></q-btn> -->
-       <div style="height: 45px;">
-      <q-btn round icon="location_on" size="md" color="indigo-5" text-color="white" @click="openMap(n.latitude,22)"></q-btn>
+       <div style="height: 45px;" class="q-mx-sm">
+      <q-btn round icon="location_on" size="md" color="indigo-5" text-color="white" @click="openMap(n.latitude,n.longitude)"></q-btn>
     </div> 
       <q-item-section class="text-right text-h6">{{ n.center }}</q-item-section> 
    
