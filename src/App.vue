@@ -204,14 +204,14 @@ onMounted(() => {
 
 <q-page-sticky v-if="store.screen!='Landing' && store.screen!='Final'" position="bottom-right" :offset="[18, 12]">
  
-  <transition appear enter-active-class="animated slideInUp">
+  <transition appear enter-active-class="animated slideInUp slow">
   <q-btn fab icon="home" text-color="black" color="yellow-9" @click="store.screen='Landing'" />
  </transition>
 </q-page-sticky>
 
 <q-page-sticky v-if="store.screen==='Location'" position="bottom-right" :offset="[88, 12]">
  
- <transition appear enter-active-class="animated slideInUp">
+ <transition appear enter-active-class="animated slideInUp slow">
  <q-btn fab icon="apartment" text-color="black" color="indigo-3" @click="store.screen='Center'" />
 </transition>
 </q-page-sticky>
@@ -232,6 +232,18 @@ onMounted(() => {
 </template>
 
 <style scoped>
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s ease; /* Duration and easing */
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0; /* Start from invisible */
+}
+
+.fade-enter-to, .fade-leave-from {
+  opacity: 1; /* End at fully visible */
+}
 .logo {
   height: 6em;
   padding: 1.5em;
