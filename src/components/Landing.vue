@@ -68,16 +68,16 @@ const shareImage = async () => {
 
     <h1 class="text-h3 q-mt-md q-mb-xs text-grey-4">ليبيا</h1>
     <h1 class="text-h6 q-mt-sm q-mb-xs text-grey-4">المركز الوطني لمكافحة الأمراض</h1>
-    <h1 class="text-h5 q-my-xs q-mb-sm text-indigo-4">ادارة التطعيمات</h1>
-    <q-img @click="store.screen='Final'" src="../assets/ncdc.png" spinner-color="white" style="height: 140px; width: 140px" />
+    <h1 class="text-h4 q-my-xs q-mb-sm text-indigo-4">إدارة التطعيمات</h1>
+    <q-img  src="../assets/ncdc.png" spinner-color="white" style="height: 140px; width: 140px" />
 
 
     <transition appear enter-active-class="animated slideInLeft">
       <h1 class="text-h3 q-my-xs full-width q-pa-sm rounded-borders">الحملة الوطنية</h1>
     </transition>
-    <h1 class="text-h5 q-my-xs text-grey-5">للتطعيم ضد أمراض</h1>
-    <h1 class="text-h4 q-mt-lg q-mb-sm text-amber-3">شلل الاطفـال</h1>
-    <h1 class="text-h5 q-my-xs q-mb-lg text-amber-3">الحصبة و الحصبة الألمانية</h1>
+    <h1 class="text-h5 q-my-xs text-grey-5">للتطعيمات ضد أمراض</h1>
+    <h1 class="text-h4 q-mt-lg q-mb-sm text-amber-3">شلل الأطفال</h1>
+    <h1 class="text-h5 q-my-xs q-mb-lg text-amber-3">والحصبة والحصبة الألمانية</h1>
   </div>
  
   <div v-if="store.countdown">

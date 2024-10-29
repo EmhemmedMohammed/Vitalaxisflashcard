@@ -30,7 +30,7 @@
       <p class="q-mb-xs  text-subtitle1">الجنس</p>
       <q-btn-toggle   v-model="store.sq3" color="indigo-5" toggle-color="yellow-7" toggle-text-color="black"  :options="[
         { label: 'انتى', value: 'انتي' },
-        { label: 'دكر', value: 'دكر' }
+        { label: 'ذكر', value: 'ذكر' }
       ]" />
     </div>
   </transition>
@@ -136,7 +136,7 @@
 
   <hr class="full-width q-my-sm">
   <div class="row justify-between items-center full-width reverse">
-    <p class="q-mb-xs text-right text-subtitle1">هل لدي الطفل حساسية ضد أدوية او اطعمة معينة</p>
+    <p class="q-mb-xs text-right text-subtitle1">هل لدي الطفل حساسية ضد أدوية او اطعمة معينة؟</p>
     <q-btn-toggle   v-model="store.sq22" color="indigo-5" toggle-color="yellow-7" toggle-text-color="black"
       :options="[
         { label: 'لا', value: 'لا' },
@@ -146,7 +146,7 @@
 
   <hr class="full-width q-my-sm">
   <div class="row justify-between items-center full-width reverse">
-    <p class="q-mb-xs text-right text-subtitle1">هل سبق أن تعرض الطفل لأي اعراض جانبية بعد اي لقاح سابق</p>
+    <p class="q-mb-xs text-right text-subtitle1">هل سبق أن تعرض الطفل لأي اعراض جانبية بعد اي لقاح سابق؟</p>
     <q-btn-toggle   v-model="store.sq23" color="indigo-5" toggle-color="yellow-7" toggle-text-color="black"
       :options="[
         { label: 'لا', value: 'لا' },
@@ -170,10 +170,10 @@
       input-class="text-right" />
     <div>
       <q-chip v-model:selected="effect.fever" color="indigo-5" text-color="white" icon="">
-        حراره
+        حرارة
       </q-chip>
       <q-chip v-model:selected="effect.Pain" color="indigo-5" text-color="white" icon="">
-        الم مكان الحقن
+        ألم مكان الحقن
       </q-chip>
       <q-chip v-model:selected="effect.swellingatsiteofinjection" color="indigo-5" text-color="white" icon="">
         انتفاخ مكان الحقن
@@ -188,16 +188,16 @@
         الم بالعضلات
       </q-chip>
       <q-chip v-model:selected="effect.nause" color="indigo-5" text-color="white" icon="">
-        غتيان او قئ
+        غثيان او قئ
       </q-chip>
       <q-chip v-model:selected="effect.diarrhea" color="indigo-5" text-color="white" icon="">
         اسهال
       </q-chip>
       <q-chip v-model:selected="effect.seizure" color="indigo-5" text-color="white" icon="">
-        تشنجات عصبيه
+        تشنجات عصبية
       </q-chip>
       <q-chip v-model:selected="effect.breathing" color="indigo-5" text-color="white" icon="">
-        صعوبه بالتنفس
+        صعوبة بالتنفس
       </q-chip>
       <q-chip v-model:selected="effect.swollenface" color="indigo-5" text-color="white" icon="">
         انتفاخ بالوجه
@@ -210,10 +210,10 @@
     <p class="q-mb-xs  text-subtitle1">حده الاعراض</p>
     <q-btn-toggle   v-model="store.sq14" color="indigo-5" toggle-color="yellow-7" toggle-text-color="black"
       :options="[
-        { label: 'خطيره', value: 'خطيره' },
-        { label: 'حاده', value: 'حاده' },
-        { label: 'متوسطه', value: 'متوسطه' },
-        { label: 'بسيطه', value: 'بسيطه' },
+        { label: 'خطيرة', value: 'خطيره' },
+        { label: 'حادة', value: 'حاده' },
+        { label: 'متوسطة', value: 'متوسطه' },
+        { label: 'بسيطة', value: 'بسيطه' },
       ]" />
   </div>
   <hr class="full-width q-my-sm">
@@ -221,21 +221,21 @@
     <p class="q-mb-xs  text-subtitle1">وقت ظهور الاعراض بالساعات</p>
     <q-btn-toggle   v-model="store.sq15" color="indigo-5" toggle-color="yellow-7" toggle-text-color="black"
       :options="[
-        { label: '>72', value: 'More than 3 days' },
+        { label: '72<', value: 'More than 3 days' },
         { label: '72-24', value: '1-3 days' },
         { label: '24-12', value: '12-24 hours' },
         { label: '12-1', value: '1-12 hours' },
-        { label: '<12', value: 'Within minutes' },
+        { label: '1>', value: 'Within minutes' },
       ]" />
   </div>
   <hr class="full-width q-my-sm">
   <div class="row justify-between items-center full-width reverse">
-    <p class="q-mb-xs  text-subtitle1">مده بقاء الاعراض بالايام</p>
+    <p class="q-mb-xs  text-subtitle1">مدة بقاء الاعراض بالأيام</p>
     <q-btn-toggle   v-model="store.sq16" color="indigo-5" toggle-color="yellow-7" toggle-text-color="black"
       :options="[
-        { label: '>3', value: 'More Than 3 days' },
+        { label: '3<', value: 'More Than 3 days' },
         { label: '3-1', value: '1-3 days' },
-        { label: '<1', value: 'Less than 1 day' },
+        { label: '1>', value: 'Less than 1 day' },
       ]" />
   </div>
 
@@ -273,7 +273,7 @@
   </div>
   <hr class="full-width q-my-sm">
   <div class="row justify-between items-center full-width reverse">
-    <p class="q-mb-xs  text-subtitle1">أكد علي صحة البيانات اعلاه و اوافق علي التواصل معي</p>
+    <p class="q-mb-xs  text-subtitle1">أؤكد علي صحة البيانات اعلاه و اوافق علي التواصل معي</p>
     <q-btn-toggle   v-model="store.sq21" color="indigo-5" toggle-color="yellow-7" toggle-text-color="black"
       :options="[
         { label: 'لا', value: 'لا' },

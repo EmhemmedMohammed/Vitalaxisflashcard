@@ -2,7 +2,7 @@
    <transition appear enter-active-class="animated backInUp">
     <div class="row justify-center items-center reverse no-wrap">
     <h1 class="text-h4 q-mt-lg q-mb-sm text-yellow text-center  q-pr-lg">التقييم</h1>
-<h1 class="text-h6 q-mb-sm q-mt-sm text-grey-5 text-center q-pr-lg">نرجوا من حضرتكم تعبيئته</h1>
+<h1 class="text-h6 q-mb-sm q-mt-sm text-grey-5 text-center q-pr-lg">نرجوا من حضرتكم تعبئته</h1>
 </div>
 </transition>
 <hr class="full-width q-mt-sm">
@@ -45,7 +45,7 @@
 <transition appear enter-active-class="animated slideInLeft">
   <div class="row no-wrap items-center reverse">
   <q-icon color="indigo-3"  class="q-mx-xs" size="md" name="api" />
-  <h1 class="text-h6 q-mt-md text-grey-1 text-right full-width q-pr-lg">ما مدى فعالية الحملة في زيادة الوعي بالتطعيم؟</h1>
+  <h1 class="text-h6 q-mt-md text-grey-1 text-right full-width q-pr-lg">ما مدى فاعلية الحملة في زيادة الوعي بفوائد التطعيمات؟</h1>
 </div>
 </transition>
 <q-rating v-model="store.q5" :max="5" size="3.5em" color="green-5" :icon="icons"/>

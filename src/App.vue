@@ -14,7 +14,7 @@ import { ref, onMounted,watch, onBeforeUpdate,nextTick } from 'vue';
 
 
 
-function smoothScrollToBottom(duration = 2000) {
+function smoothScrollToBottom(duration = 1000) {
 
   const start = window.scrollY;
   const end = document.documentElement.scrollHeight;

@@ -42,7 +42,7 @@ const shareImage = async () => {
 
     <!-- <transition appear enter-active-class="animated slideInLeft"> -->
       <h1 class="text-h6 q-my-xs full-width q-pa-sm rounded-borders">
-تسر إدارة التطعيمات بأن تتقدم اليكم بخالص الشكر والتقدير لدعمكم الكبير في نجاح حملة التطعيم. لقد كانت مساهمتكم ركيزة أساسية لتحقيق هذا النجاح و بدون تعاونكم لما تمكنّا من الوصول إلى هذه النتيجة الهامة</h1>
+تسر إدارة التطعيمات بأن تتقدم إليكم بخالص الشكر والتقدير لدعمكم الكبير في نجاح حملة التطعيمات. لقد كانت مساهمتكم ركيزة أساسية لتحقيق هذا النجاح و بدون تعاونكم لما تمكنّا من الوصول إلى هذه النتيجة الهامة</h1>
     <!-- </transition> -->
     <h1 class="text-body1 q-my-xs full-width q-pa-sm rounded-borders text-indigo-2">
 سنبقيكم على اطلاع دائم بأي حملات مستقبلية وتحديثات صحية هامة عبر هذا التطبيق
@@ -57,7 +57,7 @@ const shareImage = async () => {
 <h1 class=" text-h5 q-my-xs text-indigo-2 text-center full-width q-pr-lg">مع تحيــــــــات</h1>
 <h1 class=" text-h5 q-my-xs text-grey-1 text-center full-width q-pr-lg">إدارة التطعيمــــــــــات</h1>
 <h1 class=" text-body1 q-my-xs text-grey-1 text-center full-width q-pr-lg">بالمركز الوطني لمكافحة الأمراض</h1>
-<h1 class=" text-h4 q-my-xs text-indigo-1 text-center full-width q-pr-lg">EPI</h1>
+<h1 class=" text-h4 q-my-xs text-indigo-1 text-center full-width q-pr-lg">EPI - Libya</h1>
 </div>
 </div>
 <h1 class="text-body1 q-mb-xs q-mt-lg text-grey-5 text-center full-width q-pr-lg"> جميع الحقوق محفوظة</h1>
