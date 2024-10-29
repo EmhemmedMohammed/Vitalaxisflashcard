@@ -273,7 +273,7 @@
   </div>
   <hr class="full-width q-my-sm">
   <div class="row justify-between items-center full-width reverse">
-    <p class="q-mb-xs  text-subtitle1">أؤكد علي صحة البيانات اعلاه و اوافق علي التواصل معي</p>
+    <p class="q-mb-xs  text-subtitle1 text-right">أؤكد علي صحة البيانات اعلاه و اوافق علي التواصل معي</p>
     <q-btn-toggle   v-model="store.sq21" color="indigo-5" toggle-color="yellow-7" toggle-text-color="black"
       :options="[
         { label: 'لا', value: 'لا' },
