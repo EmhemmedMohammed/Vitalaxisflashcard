@@ -14,26 +14,26 @@ import { ref, onMounted,watch, onBeforeUpdate,nextTick } from 'vue';
 
 
 
-// function smoothScrollToBottom(duration = 2000) {
+function smoothScrollToBottom(duration = 2000) {
 
-//   const start = window.scrollY;
-//   const end = document.documentElement.scrollHeight;
-//   const startTime = performance.now();
+  const start = window.scrollY;
+  const end = document.documentElement.scrollHeight;
+  const startTime = performance.now();
 
-//   function scrollStep(currentTime) {
-//     const elapsed = currentTime - startTime;
-//     const progress = Math.min(elapsed / duration, 1); // Limit progress to 1 (100%)
-//     const newPosition = start + (end - start) * progress;
+  function scrollStep(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1); // Limit progress to 1 (100%)
+    const newPosition = start + (end - start) * progress;
 
-//     window.scrollTo(0, newPosition);
+    window.scrollTo(0, newPosition);
 
-//     if (progress < 1) {
-//       requestAnimationFrame(scrollStep); // Continue animation until done
-//     }
-//   }
-//   requestAnimationFrame(scrollStep);
+    if (progress < 1) {
+      requestAnimationFrame(scrollStep); // Continue animation until done
+    }
+  }
+  requestAnimationFrame(scrollStep);
 
-// }
+}
 
 // function smoothScrollToBottom() {
 //   window.scrollTo({
@@ -42,70 +42,57 @@ import { ref, onMounted,watch, onBeforeUpdate,nextTick } from 'vue';
 //   });
 // }
 
-function smoothScrollToBottom(duration = 3000) {
-  // Disable user interactions
-  document.body.style.pointerEvents = 'none';
+// function smoothScrollToBottom(duration = 3000) {
+//   // Disable user interactions
+//   document.body.style.pointerEvents = 'none';
 
-  const start = 0;  // Current scroll position
-  const end = document.body.scrollHeight ;  // Bottom position considering the viewport height
-  // const end = document.querySelector('.q-layout--containerized').scrollHeight
-  const distance = end - start;  // Total scroll distance
-  const startTime = performance.now();  // Record the start time
+//   const start = 0;  // Current scroll position
+//   const end = document.body.scrollHeight ;  // Bottom position considering the viewport height
+//   // const end = document.querySelector('.q-layout--containerized').scrollHeight
+//   const distance = end - start;  // Total scroll distance
+//   const startTime = performance.now();  // Record the start time
 
-  function scrollStep(currentTime) {
-    const elapsed = currentTime - startTime;  // Time elapsed since the start
-    const progress = Math.min(elapsed / duration, 1);  // Cap progress at 1 (100%)
-    const newPosition = start + distance * progress *0.5;  // Calculate new position
+//   function scrollStep(currentTime) {
+//     const elapsed = currentTime - startTime;  // Time elapsed since the start
+//     const progress = Math.min(elapsed / duration, 1);  // Cap progress at 1 (100%)
+//     const newPosition = start + distance * progress *0.5;  // Calculate new position
 
-    window.scrollTo(0, newPosition);  // Scroll to new position
+//     window.scrollTo(0, newPosition);  // Scroll to new position
 
-    if (progress < 1) {
-      requestAnimationFrame(scrollStep);  // Continue scrolling until done
-    } else {
-      // Re-enable user interactions once scrolling is finished
-      document.body.style.pointerEvents = 'auto';
-    }
-  }
+//     if (progress < 1) {
+//       requestAnimationFrame(scrollStep);  // Continue scrolling until done
+//     } else {
+//       // Re-enable user interactions once scrolling is finished
+//       document.body.style.pointerEvents = 'auto';
+//     }
+//   }
 
-  requestAnimationFrame(scrollStep);  // Start the animation
-}
+//   requestAnimationFrame(scrollStep);  // Start the animation
+// }
 
 
 
+// onMounted(async () => {
+//   await nextTick(); // Wait for initial DOM updates
+//   const qLayoutElement = document.querySelector('.scroll'); // Select .q-layout element
+//     // Scroll to the bottom of .q-layout after DOM updates
+//     qLayoutElement.scrollTo({
+//       top: qLayoutElement.scrollHeight, // Scroll to bottom of the element
+//       behavior: 'smooth' // Use smooth scrolling if desired
+
+// })
+// });
 
 onMounted(() => {
   smoothScrollToBottom(); // Initiate smooth scrolling on mount
 });
 
-onMounted(() => {
-  smoothScrollToBottom();
-});
+// onMounted(() => {
+//   smoothScrollToBottom();
+// });
 
 
-// Watch the `store.screen` variable
-// watch(() => store.screen, (newVal, oldVal) => {
-//   // Automatically scroll the `#app` div to the top when `store.screen` changes
-//   const appDiv = document.getElementById('app')
-//   if (appDiv) {
-//     appDiv.scrollTo({
-//       top: 0,
-//       behavior: 'smooth' // Optional for a smooth scroll effect
-//     })
-//   }
-// })
 
-// Watch the `store.screen` variable
-// watch(() => store.screen, () => {
-//   // Scroll the window to the top
-//   window.scrollTo({
-//     top: 0,
-//     behavior: 'auto' // Instant scroll without animation
-//     // behavior: 'smooth' // Optional for a smooth scroll effect
-//   })
-// })
-
-// Watch the `store.screen` variable
-// Watch the `store.screen` variable
 watch(() => store.screen, async () => {
   await nextTick(); // Wait for DOM updates
   if (store.screen === 'Landing') {
@@ -122,6 +109,27 @@ watch(() => store.screen, async () => {
     });
   }
 });
+
+
+// watch(() => store.screen, async () => {
+//   await nextTick(); // Wait for DOM updates
+  
+//   const qLayoutElement = document.querySelector('.scroll'); // Select .q-layout element
+  
+//   if (store.screen === 'Landing') {
+//     // Scroll to the bottom of .q-layout after DOM updates
+//     qLayoutElement.scrollTo({
+//       top: qLayoutElement.scrollHeight, // Scroll to bottom of the element
+//       behavior: 'auto' // Use smooth scrolling if desired
+//     });
+//   } else {
+//     // Scroll to the top of .q-layout for all other screens
+//     qLayoutElement.scrollTo({
+//       top: 0, // Scroll to top of the element
+//       behavior: 'auto' // Use smooth scrolling if desired
+//     });
+//   }
+// });
 
 
 
@@ -177,7 +185,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <q-layout >
+  <!-- <q-layout container view="lHh lpr lFf" style="max-width: 450px; height: 100vh;" > -->
+    <q-layout >
     
   <!-- <q-header elevated class="bg-primary text-white">
       <q-toolbar>
@@ -191,7 +200,7 @@ onMounted(() => {
     </q-header> -->
     
     <q-page-container >
-      <q-page  >
+      <q-page >
 <Landing v-if="store.screen === 'Landing'"></Landing>
 <About v-if="store.screen === 'About'"></About>
 <Center v-if="store.screen === 'Center'"></Center>

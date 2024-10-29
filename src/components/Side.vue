@@ -286,7 +286,7 @@
     <!-- <q-btn round class="q-mb-md q-mx-md" icon="home" size="lg" color="grey-7" text-color="black"
       @click="store.screen = 'Landing'"></q-btn>
      -->
-      <q-btn :loading="sending"  class="q-mb-md" icon-right="outgoing_mail" size="lg" color="white"
+      <q-btn rounded :loading="sending"  class="q-mb-md" icon-right="outgoing_mail" size="lg" color="white"
       text-color="black" @click="addFeed">
       ارسال
       <template v-slot:loading>
