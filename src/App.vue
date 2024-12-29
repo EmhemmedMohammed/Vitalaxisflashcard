@@ -171,7 +171,7 @@ const currentDateTime = new Date();
 if (currentDateTime < givenDateTime) {
 store.screen='Landing'
 } else {
-  store.screen='Final'
+  store.screen='Us'
 }
 }
 
